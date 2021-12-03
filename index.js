@@ -9,7 +9,7 @@ const OUTPUT_DIR = path.resolve(__dirname, "output")
 console.log(OUTPUT_DIR);
 const outputPath = path.join(OUTPUT_DIR, "team.html");
 
-//
+
 const render = require("./src/page-template.js");
 
 const teamMembers = [];
@@ -76,17 +76,13 @@ function appMenu() {
     ]).then(answers => {
       console.log(answers);
       
-      // create a manager object from class Employee
+      
       const manager = new Manager(answers.managerName, answers.managerID, answers.managerEmail, answers.managerOfficeNumber)
 
-      // TODO: YOUR CODE HERE
-      // add the manager object to teamMembers
-      //then add the manager object to the array of teamMembers
+      
       teamMembers.push(manager);
-      // TODO: YOUR CODE HERE
-      // add manager id to idArray
-      // will need to use push method to add manager's id to the idArray
-
+      
+      idArray.push(answers.managerID);
       createTeam();
     });
   }
@@ -142,17 +138,13 @@ function appMenu() {
       }
 
     ]).then(answers => {
-      // TODO: YOUR CODE HERE
-      // create an engineer object from class Employee
       const engineer = new Engineer(answers.engineerName, answers.engineerID, answers.engineerEmail, answers.engineerGithub);
 
-      // TODO: YOUR CODE HERE
-      // add the engineer object to teamMembers
+  
       teamMembers.push(engineer);
 
-      // TODO: YOUR CODE HERE
-      // add engineer id to idArray
-
+  
+      idArray.push(answers.engineerID);
       createTeam();
     });
   }
@@ -180,15 +172,9 @@ function appMenu() {
         name: 'internUniversity'
       }
     ]).then(answers => {
-      // TODO: YOUR CODE HERE
-      // create an intern object from class Employee
       const intern = new Intern(answers.internName, answers.internID, answers.internEmail, answers.internUniversity);
-
-      // TODO: YOUR CODE HERE
-      // add the intern object to teamMembers
       teamMembers.push(intern);
-      // TODO: YOUR CODE HERE
-      // add intern id to idArray
+      idArray.push(answers.internID);
       createTeam();
     });
   }
