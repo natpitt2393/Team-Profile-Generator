@@ -32,6 +32,6 @@
   If you have any questions about this projects, please contact me directly at nathaniel.epstein@gmail.com. You can view more of my projects at https://github.com/natpitt2393.
 
   ## Media
-  ![Team-Profile-Generator](./videoofproject.mp4)
+  ![Team-Profile-Generator](./Nat-Epstein-tutorial.gif)
   ![Team-Profile-Generator](./htmlmockup.png)
   [napitt2393/Team-Profile-Generator](https://github.com/natpitt2393/Team-Profile-Generator)
